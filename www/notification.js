@@ -43,6 +43,13 @@ module.exports = {
     },
 
     /**
+     * Close visible alert dialog if any
+     */
+    dismissAlert: function(completeCallback) {
+        exec(completeCallback, null, "Notification", "dismissAlert", []);
+    },
+
+    /**
      * Open a native confirm dialog, with a customizable title and button text.
      * The result that the user selects is returned to the result callback.
      *
