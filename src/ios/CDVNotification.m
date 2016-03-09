@@ -192,7 +192,7 @@ static NSMutableArray *alertList = nil;
  * Dismiss the visible alert
  */
 
-- (void)dismissAlert:(CDVInvokedUrlCommand*)command
+- (void)close:(CDVInvokedUrlCommand*)command
 {
     NSString* callbackId = command.callbackId;
     CDVPluginResult* result;

@@ -105,6 +105,9 @@ public class Notification extends CordovaPlugin {
         else if (action.equals("progressStop")) {
             this.progressStop();
         }
+        else if (action.equals("close")) {
+            this.close(callbackContext);
+        }
         else {
             return false;
         }
@@ -183,6 +186,15 @@ public class Notification extends CordovaPlugin {
             };
         };
         this.cordova.getActivity().runOnUiThread(runnable);
+    }
+
+    /**
+     * Hide current dialog if any
+     * @param callbackContext   The callback context
+     */
+    public synchronized void close(final CallbackContext callbackContext) {
+        // TODO NOT IMPLEMENTED
+        callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, 1));
     }
 
     /**

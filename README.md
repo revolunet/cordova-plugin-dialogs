@@ -36,6 +36,7 @@ Although the object is attached to the global scoped `navigator`, it is not avai
 ## Methods
 
 - `navigator.notification.alert`
+- `navigator.notification.close`
 - `navigator.notification.confirm`
 - `navigator.notification.prompt`
 - `navigator.notification.beep`
@@ -96,6 +97,13 @@ Both native-blocking `window.alert()` and non-blocking `navigator.notification.a
 
 ### BlackBerry 10 Quirks
 `navigator.notification.alert('text', callback, 'title', 'text')` callback parameter is passed the number 1.
+
+
+## navigator.notification.close
+
+Close current alert windows, iOS and Android only
+
+    navigator.notification.close()
 
 ## navigator.notification.confirm
 
@@ -270,4 +278,3 @@ The device plays a beep sound.
 - Tizen implements beeps by playing an audio file via the media API.
 
 - The beep file must be short, must be located in a `sounds` subdirectory of the application's root directory, and must be named `beep.wav`.
-

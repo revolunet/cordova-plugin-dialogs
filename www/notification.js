@@ -45,8 +45,8 @@ module.exports = {
     /**
      * Close visible alert dialog if any
      */
-    dismissAlert: function(completeCallback) {
-        exec(completeCallback, null, "Notification", "dismissAlert", []);
+    close: function(completeCallback) {
+        exec(completeCallback, null, "Notification", "close", []);
     },
 
     /**
